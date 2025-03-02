@@ -9,7 +9,7 @@ function App() {
     <BasketContextProvider>
       
       <Header />
-      {/* <Summary /> */}
+      <Summary />
       <Meals>
         <AvailableMeals />
       </Meals>
