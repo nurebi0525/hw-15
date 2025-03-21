@@ -1,5 +1,6 @@
-import { Button } from "../UI/Button";
 import styled from "styled-components";
+import { Buttonui } from "../UI/Buttonui";
+import { Box, Container } from "@mui/material";
 
 const TotalAmount = ({ onClose, orders }) => {
   const totalAmount = orders.reduce((prevValue, currentValue) => {
@@ -18,10 +19,10 @@ const TotalAmount = ({ onClose, orders }) => {
         <p>${totalAmount}</p>
       </StyledTotalAmountContent>
       <StyledTotalAmountActions>
-        <Button variant="outline" onClick={onClose}>
+        <Buttonui variant="outlined" onClick={onClose}>
           Close
-        </Button>
-        {!!orders.length && <Button>Order</Button>}
+        </Buttonui>
+        {!!orders.length && <Buttonui>Order</Buttonui>}
       </StyledTotalAmountActions>
     </StyledTotalAmountBox>
   );
@@ -29,10 +30,10 @@ const TotalAmount = ({ onClose, orders }) => {
 
 export default TotalAmount;
 
-const StyledTotalAmountBox = styled.div`
+const StyledTotalAmountBox = styled(Container)`
   padding: 30px 32px;
 `;
-const StyledTotalAmountContent = styled.div`
+const StyledTotalAmountContent = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +50,7 @@ const StyledTotalAmountContent = styled.div`
   }
 `;
 
-const StyledTotalAmountActions = styled.div`
+const StyledTotalAmountActions = styled(Box)`
   display: flex;
   justify-content: flex-end;
   margin-top: 24px;

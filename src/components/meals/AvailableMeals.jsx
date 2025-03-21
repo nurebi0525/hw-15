@@ -2,6 +2,7 @@ import React from "react";
 import { DUMMY_MEALS } from "../../styles/availableMeal";
 import { MealItem } from "./MealItem";
 import styled from "styled-components";
+import { Box, Container } from "@mui/material";
 export const AvailableMeals = () => {
   return (
     <StyledAvailabelMeals>
@@ -22,7 +23,7 @@ export const AvailableMeals = () => {
   );
 };
 
-const StyledAvailabelMeals = styled.div`
+const StyledAvailabelMeals = styled(Container)`
   padding: 10px;
   background-color: #ffffff;
   width: 1200px;
@@ -30,7 +31,7 @@ const StyledAvailabelMeals = styled.div`
   max-width: 100%;
   border-radius: 20px;
 `;
-const StyledLine = styled.div`
+const StyledLine = styled(Box)`
   background-color: grey;
   width: 100%;
   height: 2px;

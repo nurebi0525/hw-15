@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Background from "../assets/background.jpeg";
+import { memo } from "react";
 
-export const Summary = () => {
+export const Summary = memo((props) => {
   return (
     <StyledDiv>
       <div>
@@ -17,7 +18,7 @@ export const Summary = () => {
       </div>
     </StyledDiv>
   );
-};
+});
 
 const StyledDiv = styled.div`
   background: url(${Background}) center center/cover no-repeat;

@@ -5,12 +5,8 @@ import { useState } from "react";
 import { Modal } from "./UI/Modal";
 import OrderBasket from "./totalAmount/OrderBasket";
 
-export const Header = () => {
-  const [basket, setBasket] = useState(false);
+export const Header = ({basket, basketModalHandler}) => {
 
-  const basketModalHandler = () => {
-    setBasket((prev) => !prev);
-  };
   return (
     <>
       <Modal isOpen={basket} onClose={basketModalHandler}>

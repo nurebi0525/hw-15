@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Button } from "../UI/Button";
+import { Buttonui } from "../UI/Buttonui";
 import styled from "styled-components";
+import { Box, Container } from "@mui/material";
 
 export const MealForm = ({onSubmit}) => {
   const [amountValue, setAmountvalue] = useState(1);
@@ -22,7 +23,7 @@ export const MealForm = ({onSubmit}) => {
          onChange={amountValueHandle} />
       </StyledWrapper>
 
-      <Button children="+ ADD" />
+      <Buttonui type="submit" variant="default">Add +</Buttonui>
     </StyledForm>
   );
 };
@@ -34,7 +35,7 @@ const StyledForm = styled.form`
   align-items: center;
 `;
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;

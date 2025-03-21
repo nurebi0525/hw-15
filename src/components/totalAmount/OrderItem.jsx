@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "../UI/Button";
+import { Buttonui } from "../UI/Buttonui";
 
 export const OrderItem = (props) => {
   const { id, amount, title, price, onRemoveByOne, onAddByOne } = props;
@@ -12,8 +12,8 @@ export const OrderItem = (props) => {
           <span>x{amount}</span>
         </OrderDescription>
         <OrderItemButtons>
-          <Button variant="withIcon" icon="+" onClick={() => onAddByOne(id)}/>
-          <Button variant="withIcon" icon="-" onClick={() => onRemoveByOne(id)}/>
+           <Buttonui variant="default" onClick={() => onAddByOne(id)}>+</Buttonui> 
+           <Buttonui variant="default" onClick={() => onRemoveByOne(id)}>-</Buttonui>
         </OrderItemButtons>
       </OrderBoxActions>
     </OrderBox>
